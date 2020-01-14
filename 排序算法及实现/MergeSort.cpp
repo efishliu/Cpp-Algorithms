@@ -11,6 +11,10 @@ void mergeSort_t(T arr[],int left,int right){
     int mid = (left + right) / 2;
     mergeSort_t(arr,left,mid);
     mergeSort_t(arr,mid+1,right);
+    
+    //改进：对于基本有序的数组效果很好
+    //if(arr[mid] > arr[mid+1])
+    //    merge_t(arr,left,mid,right);
     merge_t(arr,left,mid,right);
 }
 
