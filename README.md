@@ -6,7 +6,7 @@
 * **[数据结构基础]("https://github.com/efishliu/Cpp-Algorithms/tree/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80")**
 
 ## 第二部分：排序算法及实现
-* **[选择排序]("https://github.com/efishliu/Cpp-Algorithms/blob/master/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%8F%8A%E5%AE%9E%E7%8E%B0/SelectSort.cpp")**
+* **[选择排序](https://github.com/efishliu/Cpp-Algorithms/blob/master/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%8F%8A%E5%AE%9E%E7%8E%B0/SelectSort.cpp)**
 * **[归并排序]("https://github.com/efishliu/Cpp-Algorithms/blob/master/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%8F%8A%E5%AE%9E%E7%8E%B0/MergeSort.cpp")**
 * **[快速排序]("https://github.com/efishliu/Cpp-Algorithms/blob/master/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%8F%8A%E5%AE%9E%E7%8E%B0/QuickSort.cpp")**
 * **[堆排序]("https://github.com/efishliu/Cpp-Algorithms/blob/master/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%8F%8A%E5%AE%9E%E7%8E%B0/HeapSort.cpp")**
