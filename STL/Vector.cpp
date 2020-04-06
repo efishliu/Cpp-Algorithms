@@ -23,10 +23,14 @@ vector之所以被认为是一个容器，是因为它能够像容器一样存�
     vector<Widget> vWidgets[n];     //每个vWidgets[i]都为一个vector
 
 //3.向vector添加一个数据
-//vector添加数据的缺省方法是push_back()。push_back()函数表示将数据添加到vector的尾部，并按需要来分配内存。
+//3.1vector添加数据的缺省方法是push_back()。push_back()函数表示将数据添加到vector的尾部，并按需要来分配内存。
 //例如：向vector<Widget>中添加10个数据，需要如下编写代码：
     for(int i= 0;i<10; i++)
-    vWidgets.push_back(Widget(i));
+        vWidgets.push_back(Widget(i));
+//3.2
+    c.insert(pos,elem);          //在pos位置插入一个elem拷贝，传回新数据位置。
+    c.insert(pos,n,elem);        //在pos位置插入n个elem数据。无返回值。
+    c.insert(pos,beg,end);       //在pos位置插入在[beg,end)区间的数据。无返回值。   
 
 //4.vector的容量
 //4.1获取vector中是否存放了数据：
@@ -40,5 +44,18 @@ vector之所以被认为是一个容器，是因为它能够像容器一样存�
 //4.5 重新指定vector的容量，使用reserve()仅仅只是修改了capacity的值：
     vWidgets.reserve();     //对应capacity()
 
-//5.访问vector中的数据
+//5.访问vector中的数据    
+    vWidgets[i];        //vector::operator[],与C语言兼容
+    vWidgets.at(i);     //vector::at(),首选;at()进行了边界检查，如果访问超过了vector的范围，将抛出out_of_range。
+    
+//6.删除vector中的数据
+//6.1删除vector中所有数据：
+    c.clear()；
+//6.2删除指定区间的数据：
+    c.erase(pos);       //删除pos位置的数据，传回下一个数据的位置。
+    c.erase(beg,end);   //删除[beg,end)区间的数据，传回下一个数据的位置。
+//6.3删除最后一个数据:
+    c.pop_back();
+
+
 
