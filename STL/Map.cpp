@@ -44,4 +44,36 @@ map是一类关联式容器。它的特点是增加和删除节点对迭代器�
         cout<<index<<mymap[index]<<endl;
 
 //5.map的查找
+//5.1使用count函数判断元素是否存在于map
+//使用count，返回的是被查找元素的个数。如果有，返回1；否则，返回0。注意，map中不存在相同元素，所以返回值只能是1或0。
+    cout<<mymap.count(2)<<endl;
+//5.2使用find函数查找map中的元素
+    map<int,string>::iterator it;
+    it = mymap.find(2);
+    if(it == mymap.end())
+        cout<<"Not Found"<<endl;
+    else
+        cout<<it->first<<it->second<<endl;
 
+//6.在map中删除元素
+//6.1通过迭代器进行删除
+    map<int,string>::iterator it;
+    it = mymap.find(2);
+    if(it != mymap.end())
+        mymap.erase(it);
+//6.2通过关键字进行删除
+    mymap.erase(2);     //删除成功返回1，否则返回0
+//6.3批量删除
+    mymap.erase(mymap.begin(),mymap.end());     //清空mymap，相当于mymap.clear()
+
+//7.map的基本操作函数
+//7.1删除所有元素
+    mymap.clear();
+//7.2判断map是否为空
+    mymap.empty();
+//7.3返回key>=给定元素的第一个位置
+    map<int,string>::iterator iter = mymap.lower_bound();
+//7.4返回key>给定元素的第一个位置
+    map<int,string>::iterator iter = mymap.upper_bound();
+//7.5返回map元素的个数
+    int num = mymap.size();
